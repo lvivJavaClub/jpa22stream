@@ -1,0 +1,39 @@
+# Get entities
+GET http://localhost:8080/board/members
+###
+GET http://localhost:8080/board/members/stream/10
+###
+GET http://localhost:8080/board/posts
+###
+GET http://localhost:8080/board/comments
+###
+
+# Execution plans
+GET http://localhost:8080/board/comments/stream/explain-hint/50
+###
+GET http://localhost:8080/board/comments/stream/explain-maxresult/50
+###
+
+# Clear DB
+GET http://localhost:8080/board/clear
+###
+
+# Get DTOs
+# JPA: Tuple and JPQL
+GET http://localhost:8080/board/members/jpa/tuple-jpql
+###
+# JPA: Constructor Expression and JPQL
+GET http://localhost:8080/board/members/jpa/constexp-jpql
+###
+# JPA: Tuple and native SQL
+GET http://localhost:8080/board/members/jpa/tuple-native-sql
+###
+# JPA: ConstructorResult and native SQL
+GET http://localhost:8080/board/members/jpa/constructor-result
+###
+# Hibernate: ResultTransformer and JPQL
+GET http://localhost:8080/board/members/hibernate/result-transformer-jpql
+###
+# Hibernate: ResultTransformer and native SQL
+GET http://localhost:8080/board/members/hibernate/result-transformer-native-sql
+###
